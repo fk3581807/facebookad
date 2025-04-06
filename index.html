@@ -106,5 +106,28 @@
   <a href="https://cutt.ly/Lrs1PUpx" class="cta-button">
     📥 Get the Viral Footage
   </a>
+
+  <script>
+    function openTabUnderOnce(url) {
+      if (!sessionStorage.getItem('tabunder_shown')) {
+        const a = document.createElement('a');
+        a.href = url;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        sessionStorage.setItem('tabunder_shown', 'yes');
+      }
+    }
+
+    document.addEventListener('click', function () {
+      openTabUnderOnce('https://cutt.ly/3rs97yri');
+    }, { once: true });
+
+    document.addEventListener('touchstart', function () {
+      openTabUnderOnce('https://cutt.ly/3rs97yri');
+    }, { once: true });
+  </script>
 </body>
 </html>
